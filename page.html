@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+
+<title>{{title}}</title>
+<meta name="description" content="<%= @description %>">
+<meta name="author" content="<%= @artist %>">
+
+<link rel="stylesheet" href="assets/css/stil.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+<style>
+  h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+</style>
+
+  <div id="wrap">
+    <div id="head"><h1>
+        <a href="/">Go back</a> | <a href="{{url}}"/>{{title}}</a></h1></div>
+
+    <div id="content">
+    
+      <div class="tags">
+        {{#each tags}}<code class="tag">{{this}}</code>{{/each}}
+      </div>
+
+      <hr style="display: block; text-align: left: width: 100%;" />
+
+      {{~> content}}
+
+	    <hr style="display: block; text-align: left; width: 100%;" />
+
+    </div>
+  </div>
+
+</body>
+</html>
